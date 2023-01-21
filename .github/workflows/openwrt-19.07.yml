@@ -79,12 +79,29 @@ jobs:
           # EOF
 
           # 编译 PISEN WFR101N 固件:
+          # cat >> .config <<EOF
+          # CONFIG_TARGET_ar71xx=y
+          # CONFIG_TARGET_ar71xx_generic=y
+          # CONFIG_TARGET_MULTI_PROFILE=y
+          # CONFIG_TARGET_DEVICE_ar71xx_generic_DEVICE_pisen-wfr101n=y
+          # CONFIG_TARGET_DEVICE_PACKAGES_ar71xx_generic_DEVICE_pisen-wfr101n=""
+          # EOF
+          
+          # 编译 OMY-X1 固件:
+
           cat >> .config <<EOF
+
           CONFIG_TARGET_ar71xx=y
+
           CONFIG_TARGET_ar71xx_generic=y
+
           CONFIG_TARGET_MULTI_PROFILE=y
-          CONFIG_TARGET_DEVICE_ar71xx_generic_DEVICE_pisen-wfr101n=y
-          CONFIG_TARGET_DEVICE_PACKAGES_ar71xx_generic_DEVICE_pisen-wfr101n=""
+
+          CONFIG_TARGET_DEVICE_ar71xx_generic_DEVICE_omy-x1=y
+
+
+          CONFIG_TARGET_DEVICE_PACKAGES_ar71xx_generic_DEVICE_omy-x1=""
+
           EOF
           
           # 常用LuCI插件选择:
